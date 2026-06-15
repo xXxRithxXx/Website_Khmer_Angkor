@@ -1,0 +1,187 @@
+@font-face {
+    font-family: Khmer_siemreap;
+    src: url(fonts/KhmerOSsiemreap.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.video_warp {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+
+}
+
+.video_warp>video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+        "intro_text intro_menu btn"
+        "welcome_btn welcome_btn welcome_btn";
+}
+
+#intro_text {
+    grid-area: intro_text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+#intro_text>span {
+    font-size: 40px;
+    font-family: khmer_siemreap;
+    color: white;
+    transition: all linear 0.3s;
+}
+
+#intro_text>span:hover {
+    color: orange;
+}
+
+/* =================================== */
+#intro_menu {
+    grid-area: intro_menu;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro_menu>a {
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+#intro_menu>a>span {
+    font-size: 18px;
+    color: white;
+    transition: all linear 0.3s;
+}
+
+#intro_menu>a:hover>span {
+    color: orange;
+}
+
+/* =================================== */
+#intro_btn {
+    grid-area: btn;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro_btn>a {
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    padding: 18px 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+    transition: all linear 0.3s;
+    text-decoration: none;
+}
+
+#intro_btn>a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-color: black;
+}
+
+/* =================================== */
+#intro_welcome {
+
+    grid-area: welcome_btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#title_welcome {
+    padding: 10px;
+    width: 50%;
+    /* background-color: white; */
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    transition: linear 0.1s;
+    
+}
+
+/* #title_welcome:hover{
+    position: relative;
+    bottom: 20px;
+    
+    } */
+    
+    #description_welcome {
+        padding: 10px;
+        width: 40%;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        margin: 0px 0px 10px 0px;
+        transition: all linear 0.1s;
+    }
+    
+    #description_welcome:hover,
+    #title_welcome:hover {
+      transform:translateY(-10px);
+      color: orange;
+    }
+    
+    /* =================================== */
+    
+    #btn_next {
+        border: 0.5px solid white;
+        padding: 10px 10px;
+        width: 10%;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0px;
+    transition: all linear 0.3s;
+}
+
+#btn_next:hover {
+    border-color: black;
+    background: white;
+
+}
+
+#btn_next:hover>a {
+    color: black;
+}
+
+#btn_next>a {
+    color: white;
+    text-decoration: none;
+
+}
